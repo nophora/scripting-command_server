@@ -11,10 +11,8 @@ const mongoose = require('mongoose');
 const PORT = process.env.PORT || 8080;
 const app = express();
 
-const MONGODB_URL="mongodb+srv://siphosethu:728220145Nhapho@@platformstore.al5ma.mongodb.net/<dbname>?retryWrites=true&w=majority"
-//process.env.
 
-mongoose.connect(MONGODB_URL|| 'mongodb://localhost/platformmovies', {
+mongoose.connect(process.env.MONGODB_URL|| 'mongodb://localhost/platformmovies', {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useFindAndModify: false,
